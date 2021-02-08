@@ -1,6 +1,6 @@
 package immedia.superhero.app.Interfaces;
 
-import immedia.superhero.app.pojo.HeroInfo;
+import immedia.superhero.app.ResponseInfo.HeroInfo;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;

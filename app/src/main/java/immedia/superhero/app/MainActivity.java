@@ -18,11 +18,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.Serializable;
 import java.util.List;
 
-import immedia.superhero.app.Adapters.HeroAdapter;
+import immedia.superhero.app.MyAdapters.HeroAdapter;
 import immedia.superhero.app.Interfaces.ApiInterface;
-import immedia.superhero.app.Networking.ApiClient;
-import immedia.superhero.app.pojo.HeroInfo;
-import immedia.superhero.app.pojo.Result;
+import immedia.superhero.app.Api.ApiClient;
+import immedia.superhero.app.ResponseInfo.HeroInfo;
+import immedia.superhero.app.ResponseInfo.Result;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -95,19 +95,19 @@ public class MainActivity extends AppCompatActivity {
                 if(response.isSuccessful() && !response.body()
                         .getResponse().equalsIgnoreCase("error")){
 
-                    Log.i(TAG, "good\n"+response.body().getResults());
+                    Log.i(TAG, "Good\n"+response.body().getResults());
                     heroData = response.body().getResults();
                     int resultSize = heroData.size();
 
                     for(int i=0; i<heroData.size();i++){
 
-                        Log.i(TAG, "Search results: "
+                        Log.i(TAG, getString(R.string.search_results)
                                 +String.valueOf(heroData.size())+"\tName: "
                                 +heroData.get(i).getName()
-                                +"\tFull Names: "+heroData.get(i).getBiography().getFullName()
+                                +getString(R.string.full_name)+heroData.get(i).getBiography().getFullName()
                                 +heroData.get(i).getId()+"\t"+heroData.get(i).getName()
-                                +"\tPower: "+heroData.get(i).getPowerstats().getIntelligence()
-                                +"\tImage URL: "+heroData.get(i).getImage().getUrl());
+                                +getString(R.string.power)+heroData.get(i).getPowerstats().getIntelligence()
+                                +getString(R.string.image_url)+heroData.get(i).getImage().getUrl());
 
                         heroAdapter = new HeroAdapter(getApplicationContext()
                                 , R.layout.listview_heros, heroData);

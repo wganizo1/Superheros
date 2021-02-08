@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +15,7 @@
         android:layout_height="405dp">
         <LinearLayout
             android:id="@+id/cardHeroImageBackground"
-            android:background="@drawable/bg_marvel"
+            android:background="@drawable/pic"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="vertical">
@@ -27,14 +26,15 @@
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
-                android:src="@drawable/ic_captain_murica"/>
+                android:src="@drawable/icon_"
+                android:background="@drawable/edit_text"/>
             <TextView
                 android:id="@+id/cardHeroName"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:text="Name"
                 android:textColor="#fff"
                 android:textStyle="bold"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:text="Publisher"
                 android:textColor="#e9ebf0"
                 android:textSize="15sp"
@@ -73,14 +73,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amaranth"
+                        android:fontFamily="@font/lobster"
                         android:text="Strength"
                         android:textSize="20sp" />
                     <TextView
                         android:id="@+id/cardHeroStrength"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amaranth"
+                        android:fontFamily="@font/lobster"
                         android:text="125"
                         android:textStyle="bold"
                         android:textSize="20sp"
@@ -97,7 +97,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amaranth"
+                        android:fontFamily="@font/lobster"
                         android:text="Speed"
                         android:textSize="20sp"
                         />
@@ -107,7 +107,7 @@
                         android:layout_height="wrap_content"
                         android:text="1205"
                         android:textStyle="bold"
-                        android:fontFamily="@font/amaranth"
+                        android:fontFamily="@font/lobster"
                         android:textSize="20sp"
                         android:paddingTop="10dp"/>
 
@@ -121,7 +121,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amaranth"
+                        android:fontFamily="@font/lobster"
                         android:text="Power"
                         android:textSize="20sp"
                         />
@@ -129,7 +129,7 @@
                         android:id="@+id/cardHeroPower"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amaranth"
+                        android:fontFamily="@font/lobster"
                         android:text="360"
                         android:textStyle="bold"
                         android:textSize="20sp"
@@ -160,17 +160,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:paddingLeft="10dp"
-                android:fontFamily="@font/amaranth"
-                android:text="Full names:"
+                android:fontFamily="@font/lobster"
+                android:text="@string/full_names"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/cardHeroFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:layout_gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="full names" />
+                android:paddingLeft="10dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -184,17 +183,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:paddingLeft="10dp"
-                android:fontFamily="@font/amaranth"
-                android:text="First Appeared: "
+                android:fontFamily="@font/lobster"
+                android:text="@string/first_appeared"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/cardHeroFirstAppearance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:layout_gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="First Appearance" />
+                android:paddingLeft="10dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -208,18 +206,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:paddingLeft="10dp"
-                android:fontFamily="@font/amaranth"
-                android:text="Affiliations: "
+                android:fontFamily="@font/lobster"
+                android:text="@string/affiliations"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cardHeroAffiliations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:layout_gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Affiliations" />
+                android:paddingLeft="10dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -232,18 +229,91 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:paddingLeft="10dp"
-                android:text="Relatives: "
+                android:text="@string/relatives"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/cardHeroRelatives"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/lobster"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="Relatives" />
+                android:text="@string/relatives" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="@font/lobster"
+                android:paddingLeft="10dp"
+                android:text="@string/weight"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/cardHeroWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lobster"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/weight" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="@font/lobster"
+                android:paddingLeft="10dp"
+                android:text="@string/height"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/heroHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lobster"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/height" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="@font/lobster"
+                android:paddingLeft="10dp"
+                android:text="@string/work"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/heroWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lobster"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/work" />
         </LinearLayout>
     </LinearLayout>
 
@@ -256,7 +326,7 @@
         android:layout_marginTop="35dp"
         android:clickable="true"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Download Poster"
+        android:text="@string/download"
         android:textColor="#fff" />
 
 </LinearLayout>

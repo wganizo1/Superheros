@@ -1,11 +1,11 @@
-package immedia.superhero.app.pojo;
+package immedia.superhero.app.ResponseInfo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Powerstats implements Serializable {
+public class Powers implements Serializable {
 
     @SerializedName("intelligence")
     @Expose

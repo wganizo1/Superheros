@@ -1,4 +1,4 @@
-package immedia.superhero.app.pojo;
+package immedia.superhero.app.ResponseInfo;
 
 import java.io.Serializable;
 import java.util.List;

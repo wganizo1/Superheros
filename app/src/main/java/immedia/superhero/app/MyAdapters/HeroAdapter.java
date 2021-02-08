@@ -1,4 +1,4 @@
-package immedia.superhero.app.Adapters;
+package immedia.superhero.app.MyAdapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -18,7 +18,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import java.util.List;
 
-import immedia.superhero.app.pojo.Result;
+import immedia.superhero.app.ResponseInfo.Result;
 import immedia.superhero.app.R;
 
 public class HeroAdapter extends ArrayAdapter<Result> {
@@ -50,7 +50,7 @@ public class HeroAdapter extends ArrayAdapter<Result> {
 
         Glide.with(context)
                 .load(heroinfo.get(position).getImage().getUrl())
-                .placeholder(R.drawable.ic_captain_murica)
+                .placeholder(R.drawable.launcher_bg)
                 .error(R.drawable.ic_launcher_foreground)
                 .listener(new RequestListener<Drawable>() {
                     @Override

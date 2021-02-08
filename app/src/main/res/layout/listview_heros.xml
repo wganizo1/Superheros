@@ -14,9 +14,10 @@
 
     <ImageView
         android:id="@+id/hero_image"
-        android:src="@drawable/ic_captain_murica"
+        android:src="@drawable/launcher_bg"
         android:paddingLeft="10dp"
         android:layout_width="80dp"
+        android:background="@drawable/edit_text"
         android:layout_height="match_parent" />
 
     <TextView
@@ -29,7 +30,7 @@
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/hero_image"
         android:layout_toRightOf="@+id/hero_image"
-        android:fontFamily="@font/amaranth"
+        android:fontFamily="@font/lobster"
         android:maxLines="1"
         android:gravity="center"
         android:text="Name"
@@ -43,7 +44,7 @@
             android:layout_below="@+id/heroName"
             android:layout_alignStart="@+id/heroName"
             android:layout_alignLeft="@id/heroName"
-            android:fontFamily="@font/amaranth"
+            android:fontFamily="@font/lobster"
             android:gravity="center_horizontal"
             android:layout_gravity="center_vertical"
             android:maxLines="1"

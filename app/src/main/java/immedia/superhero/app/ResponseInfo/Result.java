@@ -1,4 +1,4 @@
-package immedia.superhero.app.pojo;
+package immedia.superhero.app.ResponseInfo;
 
 
 import androidx.annotation.NonNull;
@@ -27,7 +27,7 @@ public class Result implements Serializable {
     private String name;
     @SerializedName("powerstats")
     @Expose
-    private Powerstats powerstats;
+    private Powers powerstats;
     @SerializedName("biography")
     @Expose
     private Biography biography;
@@ -60,11 +60,11 @@ public class Result implements Serializable {
         this.name = name;
     }
 
-    public Powerstats getPowerstats() {
+    public Powers getPowerstats() {
         return powerstats;
     }
 
-    public void setPowerstats(Powerstats powerstats) {
+    public void setPowerstats(Powers powerstats) {
         this.powerstats = powerstats;
     }
 

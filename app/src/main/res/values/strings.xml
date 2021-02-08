@@ -1,5 +1,16 @@
 <resources>
-    <string name="app_name">Superheroes</string>
+    <string name="app_name">SuperHeroes</string>
     <string name="api_superheroes_token">5364278040264768</string>
-    <string name="header_launch_activity">Immedia for your favourite heroes</string>
+    <string name="download">Download</string>
+    <string name="weight">Weight</string>
+    <string name="relatives">Relatives</string>
+    <string name="affiliations">Affiliations:</string>
+    <string name="first_appeared">First Appeared:</string>
+    <string name="full_names">Full names:</string>
+    <string name="height">Height</string>
+    <string name="work">Work</string>
+    <string name="search_results">\"Search results: \"</string>
+    <string name="full_name">\"\tFull Names: \"</string>
+    <string name="image_url">\"\tImage URL: \"</string>
+    <string name="power">\"\tPower: \"</string>
 </resources>

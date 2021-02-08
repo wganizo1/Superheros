@@ -1,4 +1,4 @@
-package immedia.superhero.app.Networking;
+package immedia.superhero.app.Api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

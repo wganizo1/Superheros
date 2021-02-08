@@ -1,4 +1,4 @@
-package immedia.superhero.app.pojo;
+package immedia.superhero.app.ResponseInfo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

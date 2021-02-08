@@ -20,8 +20,8 @@ import java.io.OutputStream;
 import java.util.List;
 
 import immedia.superhero.app.Interfaces.ApiInterface;
-import immedia.superhero.app.Networking.ApiClient;
-import immedia.superhero.app.pojo.Result;
+import immedia.superhero.app.Api.ApiClient;
+import immedia.superhero.app.ResponseInfo.Result;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -38,7 +38,7 @@ public class HeroCardActivity extends AppCompatActivity {
     int position;
     ImageView heroImage;
     TextView heroName, heroPower, heroSpeed, heroStrength, heroPublisher;
-    TextView heroFullName, heroFirstAppearance, heroRelatives, heroAffiliations;
+    TextView heroWork, heroHeight, heroFullName, heroFirstAppearance, heroRelatives, heroAffiliations, heroWeight;
     Retrofit retrofit;
     Button btnDownloadImage;
 
@@ -46,7 +46,9 @@ public class HeroCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hero_card);
-
+        heroWeight = findViewById(R.id.cardHeroWeight);
+        heroWork = findViewById(R.id.heroWork);
+        heroHeight = findViewById(R.id.heroHeight);
         heroImage = findViewById(R.id.cardHeroImage);
         heroName = findViewById(R.id.cardHeroName);
         heroPower = findViewById(R.id.cardHeroPower);
@@ -69,7 +71,10 @@ public class HeroCardActivity extends AppCompatActivity {
             //Set values
             Glide.with(getApplicationContext())
                     .load(list.get(position).getImage().getUrl()).into(heroImage);
-            heroName.setText(list.get(position).getName());
+            heroWeight.setText(new StringBuilder().append(list.get(position).getAppearance().getWeight()).toString());
+            heroHeight.setText(new StringBuilder().append(list.get(position).getAppearance().getHeight()).toString());
+            heroWork.setText(new StringBuilder().append(list.get(position).getWork().getOccupation()));
+            heroName.setText(new StringBuilder().append(list.get(position).getName()).append("\n\nPlace of Birth").append(list.get(position).getBiography().getPlaceOfBirth()).toString());
             heroPublisher.setText(list.get(position).getBiography().getPublisher());
             heroSpeed.setText(list.get(position).getPowerstats().getSpeed());
             heroStrength.setText(list.get(position).getPowerstats().getStrength());
@@ -106,7 +111,7 @@ public class HeroCardActivity extends AppCompatActivity {
 
                 boolean writtenToDisk = writeResponseBodyToDisk(response.body(), name);
 
-                Log.i("File download success? ", String.valueOf(writtenToDisk));
+                Log.i("Download Successful? ", String.valueOf(writtenToDisk));
 
                 if(writtenToDisk){
                     Toast toast = Toast.makeText(getApplicationContext(),
@@ -165,10 +170,6 @@ public class HeroCardActivity extends AppCompatActivity {
                     outputStream.write(fileReader, 0, read);
 
                     fileSizeDownloaded += read;
-
-                    Log.i("File Download: " , fileSizeDownloaded + " of " + fileSize);
-                    Log.i("File Download: " , heroImageFile.getAbsolutePath());
-
                 }
 
                 outputStream.flush();
