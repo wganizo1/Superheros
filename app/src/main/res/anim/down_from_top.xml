@@ -6,5 +6,3 @@
         android:fromYDelta="-100%" android:toYDelta="0%"
         android:duration="400" />
 </set>
-
-<!--Animation for listview-->

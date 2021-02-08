@@ -27,7 +27,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/edit_text_"/>
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_text"/>
 
     <ListView
         android:id="@+id/heroList"

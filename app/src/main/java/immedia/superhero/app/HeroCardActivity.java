@@ -29,8 +29,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 /**
- * @author Gaudencio Solivatore
- * This activity will handle displaying the heros details once user slects them from the list**/
+ * @author Wellington Ganizo**/
 public class HeroCardActivity extends AppCompatActivity {
 
     String TAG = "HeroCardActivity";
@@ -88,7 +87,7 @@ public class HeroCardActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "downloading image..",
+                            "Downloading...",
                             Toast.LENGTH_SHORT);
                     toast.show();
 

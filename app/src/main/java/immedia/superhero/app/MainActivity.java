@@ -27,7 +27,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-
+/**
+ * @author Wellington Ganizo**/
 public class MainActivity extends AppCompatActivity {
     String TAG = "MAIN ACTIVITY";
     Retrofit retrofit;

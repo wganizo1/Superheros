@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * @author Wellington Ganizo**/
 
 public class LaunchActivity extends AppCompatActivity {
 
